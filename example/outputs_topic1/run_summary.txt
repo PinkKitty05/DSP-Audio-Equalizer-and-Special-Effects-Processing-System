@@ -1,0 +1,39 @@
+Topic 1 summary
+
+Audio: C:\Users\Owner\OneDrive\Homework\DSP\Example\OSR_us_000_0011_8k.wav
+fs: 8000.0 Hz (Nyquist 4000.0 Hz)
+MATLAB: 25.1.0.2973910 (R2025a) Update 1 on PCWIN64
+
+Crossovers: fc1=300 Hz, fc2=3000 Hz
+Gains (dB): low=+6.0, mid=-3.0, high=+4.0
+
+Preprocessing: mono (channel average when needed), peak normalized
+
+FIR: order=146, group delay=73 samples (9.12 ms)
+IIR (3-band Linkwitz-Riley): base orders @fc1/@fc2=8/8
+IIR mode: explicit LR (lr_order=4); Rp/Rs/guard fields are not used
+IIR max pole radius=0.9087
+
+Peaks (abs): FIR before headroom=0.8896, after headroom=0.8896, final=0.8132
+Peaks (abs): IIR before headroom=0.9068, after headroom=0.8913, final=0.8293
+
+Reconstruction (complex sum) max deviation: FIR vs delay=1.912e-14
+Reconstruction (IIR explicit 3-band sum) time-domain max |low+mid+high-x| = 4.247e-15
+Reconstruction (IIR residual-mid sanity) max |low+(x-low-high)+high-x| = 2.22e-16
+Reconstruction magnitude ripple (dB): FIR=0.000 dB, IIR=0.000 dB
+
+FIR sanity checks
+- Edge gains (|H(0)|, |H(pi)|):
+  Low : (1.0000, 0.0001)  [expect ~1, ~0]
+  Mid : (0.0001, 0.0001)  [expect ~0, ~0]
+  High: (0.0001, 1.0000)  [expect ~0, ~1]
+- Symmetry max|h-flip(h)| (abs/rel):
+  Low : 0 / 0
+  Mid : 0 / 0
+  High: 0 / 0
+- Hsum magnitude max abs dev from 0 dB: 8.75e-12 dB
+- Hsum group delay median: 73.000 samples; max abs dev: 9.01e-11 samples
+- Best delay fit: sign=+1, delay=73 samples (max err=4.37e-14, rms err=8.1e-15)
+RMS: original=0.1067, FIR+echo=0.1067, IIR+echo=0.1067
+Crest: original=9.373, FIR+echo=7.622, IIR+echo=7.773
+Peaks after headroom: FIR=0.8896, IIR=0.8913

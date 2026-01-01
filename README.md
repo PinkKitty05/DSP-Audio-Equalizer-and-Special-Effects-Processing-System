@@ -26,6 +26,10 @@ Outputs are saved to `outputs_topic1/` directory including:
 - Processed audio files (FIR and IIR versions)
 - Reconstruction verification plots
 
+## Artifacts
+
+Please avoid committing regenerated files under `outputs_topic1/`; add entries like `outputs_topic1/` (and any similar future output directories) to `.gitignore` when producing new results. The committed examples are provided for demonstration only.
+
 ## Technical Details
 
 | Parameter | FIR | IIR |
